@@ -1,0 +1,26 @@
+{
+  "home.php": {
+    "name": "Startseite",
+    "isActive": true,
+    "position": 1,
+    "accessibleTo": ["admin", "user"]
+  },
+  "about.php": {
+    "name": "Über uns",
+    "isActive": false,
+    "position": 2,
+    "accessibleTo": ["user"]
+  },
+  "contact.php": {
+    "name": "Kontakt",
+    "isActive": true,
+    "position": 3,
+    "accessibleTo": ["admin", "user"]
+  },
+  "chatroom.php": {
+    "name": "Chatroom",
+    "isActive": true,
+    "position": 5,
+    "accessibleTo": ["admin", "user"]
+  }
+}

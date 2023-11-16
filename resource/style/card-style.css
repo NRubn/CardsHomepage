@@ -1,0 +1,124 @@
+/*CARD*/
+
+.card-deck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+	margin-top: 200px;
+}
+
+.card-deck .card-container {
+	z-index: 0;
+	perspective: 1000px;
+	width: 200px;
+	height: 300px;
+	/*margin: 10px 15px;*/
+	cursor: pointer;
+	transition-duration:500ms;
+	transform:scale(1.0);
+	box-shadow: 0 0 black;
+}
+@media (hover: none) and (pointer: coarse) {
+	.card-deck .card-container {
+		margin: 10px 15px;
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.card-deck .card-container{
+		margin: 15px -50px 5px -50px;
+	}
+	.card-deck:hover .card-container {
+		margin: 15px -10px 5px -10px;
+	}
+}
+
+
+.card-container:nth-child(1) {
+	margin-top:15px;
+}
+
+.card-container:nth-child(2) {
+	margin-top:-70px;
+}
+
+.card-container:nth-child(3) {
+	margin-top:-60px;
+}
+
+.card-container:first-child {
+	transform: rotate(-13deg);
+  }
+
+  .card-container:nth-child(2){
+	transform: rotate(-6deg);
+  }
+
+  .card-container:nth-last-child(2) {
+	transform: rotate(4deg); 
+  }
+  
+  .card-container:last-child {
+	transform: rotate(14deg); 
+  }
+
+.card {
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+}
+.card-container:hover{
+	z-index: 50;
+	transform: scale(1.5);
+	box-shadow: 20px 30px 5px #80808017;
+	margin: 0px 10px 20px 10px;
+	margin-top: -150px;
+}
+
+.card-container:hover .card {
+	transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+	position: absolute;
+	width: 100%;
+	height: -webkit-fill-available;
+	backface-visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border: solid 2px gray;
+}
+
+.card-front {
+	background-color: var(--background-color2);
+	color: var(--text-color2);
+	background-image: radial-gradient(circle at top left, #090909ad, transparent);
+}
+
+.card-back {
+	background-color: var(--background-color1);
+	color: var(--text-color1);
+	transform: rotateY(180deg);
+	background-image: radial-gradient(circle at top right, #090909ad, transparent);
+}
+
+.portfolio .card-back {
+	display: flex;
+    justify-content: flex-end;
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+}
+
+.portfolio h2 {
+    text-shadow: 1px 2px 8px black;
+}
+
+
+
+/**/
